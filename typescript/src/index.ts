@@ -30,7 +30,7 @@ export class EngineError extends Error {
 async function runDDP(
   inputPath: string,
   outputPath: string,
-  apiKey: string
+  licenseKey: string
 ): Promise<void> {
   try {
     await execFileAsync(findDDP(), ["process", inputPath, outputPath, "--license-key", licenseKey], {
@@ -46,7 +46,7 @@ async function runDDP(
 
 async function runDDPJson(
   inputPath: string,
-  apiKey: string,
+  licenseKey: string,
   outputPath?: string
 ): Promise<string> {
   const args = ["json", inputPath, "--license-key", licenseKey];

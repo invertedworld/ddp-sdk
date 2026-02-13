@@ -23,7 +23,7 @@ def _find_ddp() -> str:
     return os.environ.get("DDP_SDK_BIN", DDP_BIN)
 
 
-def _run_ddp(input_path: str, output_path: str, api_key: str) -> None:
+def _run_ddp(input_path: str, output_path: str, license_key: str) -> None:
     cmd = [_find_ddp(), "process", input_path, output_path, "--license-key", license_key]
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
@@ -34,7 +34,7 @@ def _run_ddp(input_path: str, output_path: str, api_key: str) -> None:
 
 
 def _run_ddp_json(
-    input_path: str, api_key: str, output_path: str | None = None
+    input_path: str, license_key: str, output_path: str | None = None
 ) -> str:
     cmd = [_find_ddp(), "json", input_path, "--license-key", license_key]
     if output_path is not None:
