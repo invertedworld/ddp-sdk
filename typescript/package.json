@@ -1,0 +1,22 @@
+{
+  "name": "ddp-sdk",
+  "version": "0.1.0",
+  "description": "DDP SDK client - thin wrapper around the ddp binary. API key validation runs in native code.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test test/wrapper.test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["ddp", "disc", "cd", "wav", "parsing"],
+  "license": "SEE LICENSE IN LICENSE_AGREEMENT.md",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "files": ["dist", "src"]
+}

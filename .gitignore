@@ -1,0 +1,22 @@
+# Publisher-only; never sync to public dist
+docs/ADMIN.md
+docs/INVESTOR_OVERVIEW.md
+
+# Do not commit keys or secrets
+.env
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Java
+target/
+
+# TypeScript/Node
+node_modules/
+
+# OS
+.DS_Store

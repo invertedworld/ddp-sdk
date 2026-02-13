@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ddp-sdk"
+version = "0.1.0"
+description = "DDP SDK client - thin wrapper around the ddp binary. API key validation runs in native code."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary - see LICENSE_AGREEMENT.md" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
